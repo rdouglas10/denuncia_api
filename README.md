@@ -46,7 +46,7 @@ http://localhost:3000/auth/login  | POST  | Application/json | {"email": "user@g
   
   URI  | METHOD | CONTENT-TYPE | INPUT-FIELDS-EXAMPLE | OUTPUT
 ------------- | ------------- | ------------- | ------------- | -------------
-http://localhost:3000/passwords/forgot  | POST  | Application/json | {"email": "user@gmail.com"} | {"token": "4f8fb7a71c2ba15c079e"}
+http://localhost:3000/passwords/forgot  | POST | Application/json | {"email": "user@gmail.com"} | {"token": "4f8fb7a71c2ba15c079e"}
                       
                     
  2º Etapa:
