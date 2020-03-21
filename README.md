@@ -15,21 +15,20 @@ Rogalabs Test - Developer
 
 ** Público **
 
+
 - Endpoint: Cadastro de usuário:
 
-URI: http://localhost:3000/users
-
-METHOD: POST
-
-CONTENT-TYPE: Application/json
-
-PARAMS-INPUT-EXAMPLE: {
+                    
+URL  | METHOD | CONTENT-TYPE | INPUT-FIELDS-EXAMPLE
+------------- | ------------- | ------------- | -------------
+http://localhost:3000/users  | POST  | Application/json | {
                     "name": "Primeiro Usuário",
                     "username": "user",
                     "email": "user@gmail.com",
                     "password":"123456",
                     "password_confirmation": "123456"
                   }
+
 
 
 
