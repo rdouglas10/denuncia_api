@@ -32,31 +32,49 @@ PARAMS-INPUT-EXAMPLE: {
                   }
 
 
-- Endpoint: Login;
+
+- Endpoint: Login:
+
 URI: http://localhost:3000/auth/login
+
 METHOD: POST
+
 CONTENT-TYPE: Application/json
+
 PARAMS-INPUT-EXAMPLE: {
                     "email": "user@gmail.com",
                     "password":"123456"
                     }
+		    
+		    
 
-- Endpoint: Recuperar senha;
+- Endpoint: Recuperar senha:
+
   Para esse endpoint foi utilizado dois processos:
+  
   * geração de um token por meio de um forgot, que teria por objetivo enviar para o email do usuário, para que ele pudesse efetuar uma verificação.
   * com o token gerado, o usuário poderia redefinir sua senha por meio de uma atualização.
   
   1º Etapa:
+  
   URI: http://localhost:3000/passwords/forgot
+  
   METHOD: POST
+  
   CONTENT-TYPE: Application/json
+  
   PARAMS-INPUT-EXAMPLE: {"email": "user@gmail.com"}                    
+  
   RETURN: {"token": "4f8fb7a71c2ba15c079e"}                    
                     
  2º Etapa:
+ 
  URI: http://localhost:3000/passwords/reset
+ 
  METHOD: POST
+ 
  CONTENT-TYPE: Application/json
+ 
  PARAMS-INPUT-EXAMPLE: {
                     "email": "user@gmail.com",
                     "token": "4f8fb7a71c2ba15c079e",
@@ -64,31 +82,50 @@ PARAMS-INPUT-EXAMPLE: {
                   }
  
 
+
 ** Requer Autenticação **
-- Endpoint: Editar apenas os dados do usuário logado;
+
+- Endpoint: Editar apenas os dados do usuário logado:
+
 URI: http://localhost:3000/users/(username)
+
 METHOD: PUT
+
 CONTENT-TYPE: Application/json
+
 AUTHORIZATION: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODQ3NzEzNjl9.IdLGeZ3ShB6W9sYbwtEww0KgqiHy8Rx7oZbO6SyYV4k
+
 PARAMS-INPUT-EXAMPLE: {
               "username": "teste",
               "token_access": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE1ODQ4MTc2Mzl9.AM6Wx5H8xedmDMQGchkBviGISaOwt6QNpyiiu1KS_P0"
                     }
+		    
 OBS: Nesse endpoint nós vinculamos o token_access (AUTHORIZATION) ao usúario, onde por meio dele, conseguimos listar somente os dados do usuário logado, bem como utilizar para recuperar o usuário (foreingKey) para utlizar no momento da criação da denúncia.
 
 
-- Endpoint: Listar todas as denúncias cadastradas, com suporte a paginação;
+
+- Endpoint: Listar todas as denúncias cadastradas, com suporte a paginação:
+
 URI: http://localhost:3000/denunciations
+
 METHOD: GET
+
 CONTENT-TYPE: Application/json
+
 AUTHORIZATION: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODQ3NzEzNjl9.IdLGeZ3ShB6W9sYbwtEww0KgqiHy8Rx7oZbO6SyYV4k
 
 
-- Endpoint: Criar denúncia;
+
+- Endpoint: Criar denúncia:
+
 URI: http://localhost:3000/denunciations
+
 METHOD: POST
+
 CONTENT-TYPE: Application/json
+
 AUTHORIZATION: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODQ3NzEzNjl9.IdLGeZ3ShB6W9sYbwtEww0KgqiHy8Rx7oZbO6SyYV4k
+
 PARAMS-INPUT-EXAMPLE:
 {
 	"descricao": "Test description test",
@@ -100,11 +137,18 @@ PARAMS-INPUT-EXAMPLE:
 	
 }
 
-- Endpoint: Editar denúncia (INCOMPLETO...);
+
+
+- Endpoint: Editar denúncia (INCOMPLETO...):
+
 URI: http://localhost:3000/denunciations/(id)
+
 METHOD: PUT
+
 CONTENT-TYPE: Application/json
+
 AUTHORIZATION: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODQ3NzEzNjl9.IdLGeZ3ShB6W9sYbwtEww0KgqiHy8Rx7oZbO6SyYV4k
+
 PARAMS-INPUT-EXAMPLE:
 {
 	"descricao": "Description real",
