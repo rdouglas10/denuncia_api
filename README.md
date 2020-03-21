@@ -15,10 +15,14 @@ Rogalabs Test - Developer
 
 ** Público **
 
-- Endpoint: Cadastro de usuário;
+- Endpoint: Cadastro de usuário:
+
 URI: http://localhost:3000/users
+
 METHOD: POST
+
 CONTENT-TYPE: Application/json
+
 PARAMS-INPUT-EXAMPLE: {
                     "name": "Primeiro Usuário",
                     "username": "user",
