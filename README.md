@@ -71,9 +71,9 @@ OBS: Nesse endpoint nós vinculamos o token_access (AUTHORIZATION) ao usúario, 
 
 - Endpoint: Listar todas as denúncias cadastradas, com suporte a paginação:
 
- URI  | METHOD | CONTENT-TYPE | OUTPUT
-------------- | ------------- | ------------- | ------------- 
-http://localhost:3000/denunciations  | GET  | Application/json | {"status": "ok"}
+ URI  | METHOD | AUTHORIZATION | CONTENT-TYPE | OUTPUT
+------------- | ------------- | ------------- | ------------- | ------------- 
+http://localhost:3000/denunciations  | GET  | eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODQ3NzEzNjl9.IdLGeZ3ShB6W9sYbwtEww0KgqiHy8Rx7oZbO6SyYV4k | Application/json | {"status": "ok"}
 
 
 
