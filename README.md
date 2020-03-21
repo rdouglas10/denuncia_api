@@ -62,7 +62,7 @@ http://localhost:3000/passwords/reset  | POST  | Application/json | {"email": "u
 - Endpoint: Editar apenas os dados do usuário logado:
 
  URI  | METHOD | AUTHORIZATION | CONTENT-TYPE | INPUT-FIELDS-EXAMPLE | OUTPUT
-------------- | ------------- | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | ------------- | ------------- | -------------
 http://localhost:3000/users/(username)  | PUT | eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODQ3NzEzNjl9.IdLGeZ3ShB6W9sYbwtEww0KgqiHy8Rx7oZbO6SyYV4k | Application/json | {"username": "teste","token_access": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE1ODQ4MTc2Mzl9.AM6Wx5H8xedmDMQGchkBviGISaOwt6QNpyiiu1KS_P0"} | {"status": "ok"}
 		    
 OBS: Nesse endpoint nós vinculamos o token_access (AUTHORIZATION) ao usúario, onde por meio dele, conseguimos listar somente os dados do usuário logado, bem como utilizar para recuperar o usuário (foreingKey) para utlizar no momento da criação da denúncia.
