@@ -13,7 +13,7 @@ Rogalabs Test - Developer
 
 ### API
 
-** Público **
+**Público**
 
 
 - Endpoint: Cadastro de usuário:
@@ -42,11 +42,14 @@ http://localhost:3000/auth/login  | POST  | Application/json | {"email": "user@g
   * geração de um token por meio de um forgot, que teria por objetivo enviar para o email do usuário, para que ele pudesse efetuar uma verificação.
   * com o token gerado, o usuário poderia redefinir sua senha por meio de uma atualização.
   
+  
   * 1º Etapa:
   
-  URI  | METHOD | CONTENT-TYPE | INPUT-FIELDS-EXAMPLE | OUTPUT
+   URI  | METHOD | CONTENT-TYPE | INPUT-FIELDS-EXAMPLE | OUTPUT
 ------------- | ------------- | ------------- | ------------- | -------------
-http://localhost:3000/passwords/forgot  | POST | Application/json | {"email": "user@gmail.com"} | {"token": "4f8fb7a71c2ba15c079e"}
+http://localhost:3000/passwords/forgot  | POST  | Application/json | {"email": "user@gmail.com" | {"token": "4f8fb7a71c2ba15c079e"}
+
+
                       
                     
  2º Etapa:
