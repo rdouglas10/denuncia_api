@@ -1,0 +1,358 @@
+{
+	"id": "432fd498-8780-5997-3523-873ac22a30d6",
+	"name": "Users",
+	"description": "Informações sobre a maneira utilizada para manipular os usuários via API.",
+	"order": [
+		"c1aa4dd2-2dfc-90b0-437e-b90e040b5f89",
+		"1e1f8cf3-95ec-4839-bd06-788ea9871cab",
+		"84965e6c-29c5-98cc-7e74-d9705ef68cab",
+		"c1c9d35b-57ae-514d-4b50-b1bd603e5bf9",
+		"f79a27e1-743f-377a-137d-0564b61ff938",
+		"579f81ff-1af3-c25c-9f9d-841cc208dbc3",
+		"3006049e-0b1d-c43d-9d6a-bc82a9775eba",
+		"08772509-e3c0-1632-4d8e-727a31af0846",
+		"5e434411-116b-7aa9-e6d1-0edd1f719b16",
+		"d5cac5e0-bcab-9f47-6930-3560dd351013"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1584669545735,
+	"owner": "8414707",
+	"public": false,
+	"requests": [
+		{
+			"id": "08772509-e3c0-1632-4d8e-727a31af0846",
+			"headers": "Content-Type: application/json\nAuthorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE1ODQ4MTc2Mzl9.AM6Wx5H8xedmDMQGchkBviGISaOwt6QNpyiiu1KS_P0\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE1ODQ4MTc2Mzl9.AM6Wx5H8xedmDMQGchkBviGISaOwt6QNpyiiu1KS_P0",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/denunciations",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1584751117917,
+			"name": "Requisição para criar uma denúncia de um usuário ",
+			"description": "POST /denunciations HTTP/1.1\nHost: localhost:3000\nContent-Type: application/json\nAuthorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE1ODQ4MTc2Mzl9.AM6Wx5H8xedmDMQGchkBviGISaOwt6QNpyiiu1KS_P0\nCache-Control: no-cache\nPostman-Token: 6a8f53c3-02c5-52cd-cbca-21760bea0baf\n\n{\n\t\"descricao\": \"Test description test\",\n\t\"status\": \"Pendent\",\n\t\"latitude\": \"25º 55\",\n\t\"longitude\": \"35º 43\",\n\t\n\t\"medida_adotada\": \"adopted measure number three\",\n\t\"token_access_user\": \"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE1ODQ4MTc2Mzl9.AM6Wx5H8xedmDMQGchkBviGISaOwt6QNpyiiu1KS_P0\"\n\t\n}",
+			"collectionId": "432fd498-8780-5997-3523-873ac22a30d6",
+			"responses": [],
+			"rawModeData": "{\n\t\"descricao\": \"Test description test\",\n\t\"status\": \"Pendent\",\n\t\"latitude\": \"25º 55\",\n\t\"longitude\": \"35º 43\",\n\t\n\t\"medida_adotada\": \"adopted measure number three\",\n\t\"token_access_user\": \"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE1ODQ4MTc2Mzl9.AM6Wx5H8xedmDMQGchkBviGISaOwt6QNpyiiu1KS_P0\"\n\t\n}"
+		},
+		{
+			"id": "1e1f8cf3-95ec-4839-bd06-788ea9871cab",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/auth/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1584670824155,
+			"name": "Requisição para efetuar o login",
+			"description": "Informações necessárias para autenticar o usuário.\n\nPOST /auth/login HTTP/1.1\nHost: localhost:3000\nContent-Type: application/json\nCache-Control: no-cache\nPostman-Token: 6fafdbf3-3780-5a8f-6792-525287354777\n\n{\n\t\n\t\"email\": \"user@gmail.com\",\n\t\"password\":\"123456\"\n\t\n}\n\n\nRETURN:\n\n{\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODQ3NTczOTN9.JZKdWufpUvIEYzvbY7hjbJueKeUHrw4EpmoppBE4LUo\",\n    \"exp\": \"03-20-2020 23:23\",\n    \"username\": \"user\"\n}",
+			"collectionId": "432fd498-8780-5997-3523-873ac22a30d6",
+			"responses": [],
+			"rawModeData": "{\n\t\n\t\"email\": \"user@gmail.com\",\n\t\"password\":\"123456\"\n\t\n}"
+		},
+		{
+			"id": "3006049e-0b1d-c43d-9d6a-bc82a9775eba",
+			"headers": "Content-Type: application/json\nAuthorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODQ3NzEzNjl9.IdLGeZ3ShB6W9sYbwtEww0KgqiHy8Rx7oZbO6SyYV4k\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODQ3NzEzNjl9.IdLGeZ3ShB6W9sYbwtEww0KgqiHy8Rx7oZbO6SyYV4k",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/users/aris2020",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1584735402178,
+			"name": "Requisição para atualizar dados do usuário logado",
+			"description": "PUT /users/aris HTTP/1.1\nHost: localhost:3000\nContent-Type: application/json\nAuthorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODQ3NzEzNjl9.IdLGeZ3ShB6W9sYbwtEww0KgqiHy8Rx7oZbO6SyYV4k\nCache-Control: no-cache\nPostman-Token: 57b63e2e-153d-a538-ccd8-6eafed19e7ba\n\n{\n\t\"username\": \"aris2020\",\n\t\"token_access\": \"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE1ODQ4MTc2Mzl9.AM6Wx5H8xedmDMQGchkBviGISaOwt6QNpyiiu1KS_P2\"\n}\n\nRETURN SUCESS:\n{\n    \"status\": \"SUCCESS\",\n    \"message\": \"Usuário atualizado!\",\n    \"data\": [\n        {\n            \"id\": 5,\n            \"username\": \"aris\",\n            \"token_access\": \"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE1ODQ4MTc2Mzl9.AM6Wx5H8xedmDMQGchkBviGISaOwt6QNpyiiu1KS_P0\",\n            \"password_digest\": \"$2a$12$BYu.2Mr08Mce0pHYuI4R2erwd.XacNYdwuj6yS4YBXOjDRSeFYGc6\",\n            \"email\": \"arist@gmail.com\",\n            \"name\": \"Aristide\",\n            \"created_at\": \"2020-03-20T19:06:53.473Z\",\n            \"updated_at\": \"2020-03-20T20:13:03.452Z\",\n            \"reset_password_token\": null,\n            \"reset_password_sent_at\": null\n        }\n    ]\n}\n\n\nRETURN ERROR:\n\n{\n    \"error\": \"Usuário não encontrado.\"\n}\n",
+			"collectionId": "432fd498-8780-5997-3523-873ac22a30d6",
+			"responses": [],
+			"rawModeData": "{\n\t\"username\": \"aris\",\n\t\"token_access\": \"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE1ODQ4MTc2Mzl9.AM6Wx5H8xedmDMQGchkBviGISaOwt6QNpyiiu1KS_P0\"\n}"
+		},
+		{
+			"id": "579f81ff-1af3-c25c-9f9d-841cc208dbc3",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/passwords/reset",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "432fd498-8780-5997-3523-873ac22a30d6",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Requisição para alterar a senha",
+			"description": "POST /passwords/reset HTTP/1.1\nHost: localhost:3000\nContent-Type: application/json\nCache-Control: no-cache\nPostman-Token: afaae357-ddaf-04c2-450d-ecb587baf5de\n\n{\n\t\"email\": \"Irene@gmail.com\",\n\t\"token\": \"65207b81fc8a06bc42ec\",\n\t\"password\": \"112233\"\n}\n\n\nRETURN:\n\n{\n\t\"status\": \"Ok\"\n}\n",
+			"descriptionFormat": "html",
+			"time": 1584682468793,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"email\": \"Irene@gmail.com\",\n\t\"token\": \"65207b81fc8a06bc42ec\",\n\t\"password\": \"123123\"\n}"
+		},
+		{
+			"id": "5e434411-116b-7aa9-e6d1-0edd1f719b16",
+			"headers": "Content-Type: application/json\nAuthorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODQ3NzEzNjl9.IdLGeZ3ShB6W9sYbwtEww0KgqiHy8Rx7oZbO6SyYV4k\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODQ3NzEzNjl9.IdLGeZ3ShB6W9sYbwtEww0KgqiHy8Rx7oZbO6SyYV4k",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000//denunciations/21",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "432fd498-8780-5997-3523-873ac22a30d6",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Requisição para atualizar denúncia (Incompleto)",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1584753270532,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"descricao\": \"Testando a descrição\",\n\t\"status\": \"In Process\",\n\t\"latitude\": \"25º 55\",\n\t\"longitude\": \"35º 43\",\n\t\n\t\"medida_adotada\": \"mensuare\",\n\t\"token_access_user\": \"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE1ODQ4MTc2Mzl9.AM6Wx5H8xedmDMQGchkBviGISaOwt6QNpyiiu1KS_P0\"\n\t\n}"
+		},
+		{
+			"id": "84965e6c-29c5-98cc-7e74-d9705ef68cab",
+			"headers": "//Content-Type: application/json\nAuthorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODQ3NTczOTN9.JZKdWufpUvIEYzvbY7hjbJueKeUHrw4EpmoppBE4LUo\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "Authorization",
+					"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODQ3NTczOTN9.JZKdWufpUvIEYzvbY7hjbJueKeUHrw4EpmoppBE4LUo",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/users",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1584671337703,
+			"name": "Requisição para visualizar TODOS os usuários",
+			"description": "Informações necessárias para autenticar o usuário.\n\nGET /users HTTP/1.1\nHost: localhost:3000\nAuthorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODQ3NTczOTN9.JZKdWufpUvIEYzvbY7hjbJueKeUHrw4EpmoppBE4LUo\nCache-Control: no-cache\nPostman-Token: 2a97f0bd-6179-796e-57fb-00143eed3985\n\n\nRETURN: \n[\n    {\n        \"id\": 1,\n        \"name\": \"Primeiro Usuário\",\n        \"username\": \"user\",\n        \"email\": \"user@gmail.com\",\n        \"password_digest\": \"$2a$12$TQs8t1TApb.0ooBCcOa2veYFPZr.gEOFgLcwOsPIrWD7kkIQHhoeW\",\n        \"created_at\": \"2020-03-20T02:10:41.759Z\",\n        \"updated_at\": \"2020-03-20T02:10:41.759Z\"\n    }\n]",
+			"collectionId": "432fd498-8780-5997-3523-873ac22a30d6",
+			"responses": []
+		},
+		{
+			"id": "c1aa4dd2-2dfc-90b0-437e-b90e040b5f89",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/users",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "432fd498-8780-5997-3523-873ac22a30d6",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Requisição para criar um usuário",
+			"description": "Informações necessárias para a criação de um usuário.\n\nPOST /users HTTP/1.1\nHost: localhost:3000\nContent-Type: application/json\nCache-Control: no-cache\nPostman-Token: b5f5e7cb-5d9a-8358-e1f3-afc387dbe4e7\n\n{\n\t\"name\": \"Primeiro Usuário\",\n\t\"username\": \"user\",\n\t\"email\": \"user@gmail.com\",\n\t\"password\":\"123456\",\n\t\"password_confirmation\": \"123456\"\n}",
+			"descriptionFormat": "html",
+			"time": 1584670622884,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"name\": \"Primeiro Usuário\",\n\t\"username\": \"user\",\n\t\"email\": \"user@gmail.com\",\n\t\"password\":\"123456\",\n\t\"password_confirmation\": \"123456\"\n}"
+		},
+		{
+			"id": "c1c9d35b-57ae-514d-4b50-b1bd603e5bf9",
+			"headers": "//Content-Type: application/json\nAuthorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODQ3NTczOTN9.JZKdWufpUvIEYzvbY7hjbJueKeUHrw4EpmoppBE4LUo\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "Authorization",
+					"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODQ3NTczOTN9.JZKdWufpUvIEYzvbY7hjbJueKeUHrw4EpmoppBE4LUo",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/users",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1584671337703,
+			"name": "Requisição para visualizar UM usuário",
+			"description": "Informações necessárias para autenticar o usuário.\n\nGET /users HTTP/1.1\nHost: localhost:3000\nAuthorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODQ3NTczOTN9.JZKdWufpUvIEYzvbY7hjbJueKeUHrw4EpmoppBE4LUo\nCache-Control: no-cache\nPostman-Token: 2a97f0bd-6179-796e-57fb-00143eed3985\n\n\nRETURN: \n[\n    {\n        \"id\": 1,\n        \"name\": \"Primeiro Usuário\",\n        \"username\": \"user\",\n        \"email\": \"user@gmail.com\",\n        \"password_digest\": \"$2a$12$TQs8t1TApb.0ooBCcOa2veYFPZr.gEOFgLcwOsPIrWD7kkIQHhoeW\",\n        \"created_at\": \"2020-03-20T02:10:41.759Z\",\n        \"updated_at\": \"2020-03-20T02:10:41.759Z\"\n    }\n]",
+			"collectionId": "432fd498-8780-5997-3523-873ac22a30d6",
+			"responses": [],
+			"isFromCollection": true,
+			"collectionRequestId": "84965e6c-29c5-98cc-7e74-d9705ef68cab"
+		},
+		{
+			"id": "d5cac5e0-bcab-9f47-6930-3560dd351013",
+			"headers": "Content-Type: application/json\nAuthorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE1ODQ4MTc2Mzl9.AM6Wx5H8xedmDMQGchkBviGISaOwt6QNpyiiu1KS_P0\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE1ODQ4MTc2Mzl9.AM6Wx5H8xedmDMQGchkBviGISaOwt6QNpyiiu1KS_P0",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/denunciations",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1584753529247,
+			"name": "Requisição para listar todas as denúncias",
+			"description": "GET /denunciations HTTP/1.1\nHost: localhost:3000\nContent-Type: application/json\nAuthorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE1ODQ4MTc2Mzl9.AM6Wx5H8xedmDMQGchkBviGISaOwt6QNpyiiu1KS_P0\nCache-Control: no-cache\nPostman-Token: 209141b2-dea1-1116-2473-7a119a237890\n",
+			"collectionId": "432fd498-8780-5997-3523-873ac22a30d6",
+			"responses": []
+		},
+		{
+			"id": "f79a27e1-743f-377a-137d-0564b61ff938",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/passwords/forgot",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1584681176441,
+			"name": "Requisição para resetar a senha",
+			"description": "POST /passwords/forgot HTTP/1.1\nHost: localhost:3000\nContent-Type: application/json\nCache-Control: no-cache\nPostman-Token: 323cb2fa-c723-d17a-c250-cbb408012f98\n\n{\n\t\"email\":\"Irene@gmail.com\"\n}\n\nRETURN:\n\n{\n    \"token\": \"4f8fb7a71c2ba15c079e\"\n}\n\nEsse toque servirá como uma forma de confirmação (validação) para gerar uma nova senha.",
+			"collectionId": "432fd498-8780-5997-3523-873ac22a30d6",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\":\"Irene@gmail.com\"\n}"
+		}
+	]
+}
