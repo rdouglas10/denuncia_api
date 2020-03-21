@@ -21,13 +21,7 @@ Rogalabs Test - Developer
                     
 URL  | METHOD | CONTENT-TYPE | INPUT-FIELDS-EXAMPLE
 ------------- | ------------- | ------------- | -------------
-http://localhost:3000/users  | POST  | Application/json | {
-                    "name": "Primeiro Usuário",
-                    "username": "user",
-                    "email": "user@gmail.com",
-                    "password":"123456",
-                    "password_confirmation": "123456"
-                  }
+http://localhost:3000/users  | POST  | Application/json | {"name": "Primeiro Usuário","username": "user", "email": "user@gmail.com", "password":"123456","password_confirmation": "123456"}
 
 
 
