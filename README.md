@@ -1,5 +1,5 @@
 # Módulo: denuncia_api
-Rogalabs Test - Developer
+Developer RoR
 
 ### Recursos utilizados
 - Ruby 2.5.5
